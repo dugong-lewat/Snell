@@ -1,2 +1,2 @@
 # Snell
-Install Script Snell Server
+Install Snell Server
