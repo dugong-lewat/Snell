@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+clear
+rm -rf /snell/
+rm -rf /etc/snell
+rm -r /usr/local/bin/snell-server
+rm -r /etc/systemd/system/snell.service
+clear
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
 mkdir /snell/
@@ -14,7 +20,7 @@ echo "${port}" >> /snell/port
 echo "${password}" >> /snell/password
 sleep 1
 clear
-apt install unzip -y
+apt install unzip lolcat -y
 wget --no-check-certificate -O snell.zip https://github.com/surge-networks/snell/releases/download/v3.0.1/snell-server-v3.0.1-linux-amd64.zip
 unzip -o snell.zip
 chmod +x snell-server
@@ -45,8 +51,11 @@ echo "=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=�
 echo "|         Informasi Snell Server        |"
 echo "=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•="
 echo " "
-echo "    ->> IP = ${IP}              "
-echo "    ->> PORT = ${port}          "
-echo "    ->> Password = ${password}  "
-echo "    ->> OBFS = TLS              "
+echo "  ->> IP = ${IP}              " | lolcat
+echo "  ->> PORT = ${port}          " | lolcat
+echo "  ->> Password = ${password}  " | lolcat
+echo "  ->> OBFS = TLS              " | lolcat
 echo "=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•="
+rm -f ./snell.sh
+rm -f snell.zip
+cd
