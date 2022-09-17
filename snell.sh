@@ -51,10 +51,10 @@ echo "=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=�
 echo "|         Informasi Snell Server        |"
 echo "=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•="
 echo " "
-echo "  ->> IP = ${IP}              " | lolcat
-echo "  ->> PORT = ${port}          " | lolcat
-echo "  ->> Password = ${password}  " | lolcat
-echo "  ->> OBFS = TLS              " | lolcat
+echo "  ->> IP = ${IP}              "
+echo "  ->> PORT = ${port}          "
+echo "  ->> Password = ${password}  "
+echo "  ->> OBFS = TLS              "
 echo "=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•=•="
 rm -f ./snell.sh
 rm -f snell.zip
