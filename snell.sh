@@ -20,7 +20,7 @@ echo "${port}" >> /snell/port
 echo "${password}" >> /snell/password
 sleep 1
 clear
-apt install unzip lolcat -y
+apt install unzip -y
 wget --no-check-certificate -O snell.zip https://github.com/surge-networks/snell/releases/download/v3.0.1/snell-server-v3.0.1-linux-amd64.zip
 unzip -o snell.zip
 chmod +x snell-server
